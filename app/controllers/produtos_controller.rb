@@ -5,6 +5,11 @@ class ProdutosController < ApplicationController
 		@produtos_por_preco = Produto.order(:preco).limit 2
 	end
 
+	def search
+		@nome_a_buscar = params[:nome]
+		@produtos = Produto.where "nome like ?", "%#{@nome_a_buscar}%"
+	end
+
 	def create
 		valores = params.require(:produto).permit :nome, :descricao, :preco, :quantidade
 		Produto.create valores
