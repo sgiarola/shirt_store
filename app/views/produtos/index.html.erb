@@ -15,7 +15,7 @@
 				<td><%= produto.preco %></td>
 				<td><%= produto.quantidade %></td>
 				<td>
-					<%= button_to "Remover", produto, method: :delete, class: "btn btn-danger", data: { confirm: "Tem certeza que deseja remover #{produto.nome}?" } %>
+					<%= button_to "Remover", produto, method: :delete, class: "btn btn-danger", data: { confirm: "Tem certeza que deja remover #{produto.nome}?" } %>
 				</td>
 			</tr>
 			<% end %>
@@ -38,10 +38,10 @@
 				<td><%= produto.preco %></td>
 				<td><%= produto.quantidade %></td>
 				<td>
-					<%= button_to "Remover", produto, method: :delete, class: "btn btn-danger", data: { confirm: "Tem certeza que deseja remover #{produto.nome}?" } %>
+					<%= button_to "Remover", produto, method: :delete, class: "btn btn-danger", data: { confirm: "Tem certeza que deja remover #{produto.nome}?" } %>
 				</td>
 			</tr>
 			<% end %>
 		</tbody>
 	</table>
-	<%= link_to "Adicionar Produto", produtos_new_path %>
+	<%= link_to "Adicionar Produto", new_produto_path %>
